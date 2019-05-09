@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 60px;
+}
+
+header {
+    font-size: 1.2rem;
+    height: 120px;
+    background-color: chocolate;
+    color: cornsilk;
+    text-align: center;
+    padding: 3px 0px;
+}
+
+h1 {
+    margin: 12px 0;
+}
+
+h6 {
+    font-size: 1.3rem;
+    text-align: center;
+    color: darkblue;
+    background-color: cornsilk;
+    padding: 6px 3px;
+    margin: 0 auto;
+    width: 55%;
+}
+
+
+#current-schedule,
+#train-load {
+    border: 2px solid  rgb(102, 123, 163);
+    margin-top: 21px;
+
+}
+
+#table-div {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 18px;
+}
+
+h5 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    background-color:  rgb(102, 123, 163);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.title-span {
+    color: whitesmoke;
+    padding-left: 20px;
+    line-height: 2.8;
+}
+
+th {
+    background-color: rgb(209, 252, 209);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgb(181, 188, 201);
+}
+
+tr:hover {background-color: #d6ecd6;}
+
+section {
+    margin-bottom: 15px;
+}
+
+label {
+    color: black;
+    line-height: 2.1;
+}
+
+form {
+    margin: 15px 35px;
+    padding: 0px 40px;
+}
+
+#submit, #reset {
+    color: black;
+    background-color: rgb(159, 174, 202);
+    padding: 9px 18px;
+    border: 1px solid rgb(159, 174, 202);
+    border-radius: 6px;
+    margin:12px 30px 12px 3px;
+}
+
+
+#submit:hover,
+#reset:hover {
+    color: rgb(40, 40, 133);
+    background-color: rgb(197, 215, 248);
+    border: 1px solid rgb(40, 40, 133);
+    border-radius: 6px;
+}
+
+.textbox {
+    width: 85%;
+}
+
+.timebox {
+    width: 10%;
+}

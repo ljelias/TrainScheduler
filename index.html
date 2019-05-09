@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>TrainScheduler</title>
+  
+</head>
+
+<body>
+    <header>
+      <h1>Train Schedule</h1>
+      <h6>~ <span id="current-time"></span> ~</h6>
+    </header>
+
+    <div id="current-schedule">
+    <h5><span class="title-span">Current Train Schedule</span></h5>
+      <div id="table-div">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <!-- scope attribute >> header for a column -->
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody id="table">
+                  <tr>
+                    <td>Train GREEN</td>
+                    <td>Town 1</td>
+                    <td>19</td>
+                    <td>time</td>
+                    <td>x minutes</td>
+                  </tr>
+                  <tr>
+                    <td>TRAIN NAME 1</td>
+                    <td>Destination 1</td>
+                    <td>10</td>
+                    <td>time</td>
+                    <td>x minutes</td>
+                  </tr>
+                  <tr>
+                    <td>Train blue</td>
+                    <td>City 2</td>
+                    <td>17</td>
+                    <td>more time</td>
+                    <td>x minutes</td>
+                  </tr>
+                      <!-- Insert additional train table rows here -->
+                </tbody>
+            </table>
+              
+      </div>
+    </div>
+ 
+    <div id="train-load">
+      <h5><span class="title-span">Add Train</span></h5>
+            <div id="input-div">
+                <form >
+                    <section>
+                        <label for="train" class="labels">Train Name</label><br>
+                        <input type="text" name="train" class="textbox" id="train-name" required="required">
+                    </section>
+                    <section>
+                        <label for="destination" class="labels">Destination</label><br>
+                        <input type="text" name="destination" class="textbox" id="train-destination" required="required">
+                    </section>
+                    <section>
+                        <label for="time-row">First Train Time (HH:mm - military time)</label>
+                        <span id="time-hr" name="time-row"><label for="hours">Hours: </label><input type="number" name="hours" min="0" max="23" step="1" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" class="timebox" required="optional"></span>
+                        <span id="time-min"><label for="minutes">Minutes: </label><input type="number" name="minutes" min="0" max="59" step="1" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" class="timebox" required="optional"></span>
+                    </section>
+                    <section>
+                        <label for="frequency" class="labels">Freqency (min)</label><br>
+                        <input type="number" name="frequency" class="textbox" id="train-frequency" required="optional">
+                    </section>
+                    <input id="submit" type="submit" value="Submit">
+                     <input id="reset" type="reset">
+                </form>
+            </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
