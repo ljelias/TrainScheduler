@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
@@ -35,25 +36,11 @@
                 </thead>
                 <tbody id="table">
                   <tr>
-                    <td>Train GREEN</td>
+                    <td>Sample Train1</td>
                     <td>Town 1</td>
                     <td>19</td>
-                    <td>time</td>
-                    <td>x minutes</td>
-                  </tr>
-                  <tr>
-                    <td>TRAIN NAME 1</td>
-                    <td>Destination 1</td>
-                    <td>10</td>
-                    <td>time</td>
-                    <td>x minutes</td>
-                  </tr>
-                  <tr>
-                    <td>Train blue</td>
-                    <td>City 2</td>
-                    <td>17</td>
-                    <td>more time</td>
-                    <td>x minutes</td>
+                    <td>00:00</td>
+                    <td>00 minutes</td>
                   </tr>
                       <!-- Insert additional train table rows here -->
                 </tbody>
@@ -76,8 +63,8 @@
                     </section>
                     <section>
                         <label for="time-row">First Train Time (HH:mm - military time)</label>
-                        <span id="time-hr" name="time-row"><label for="hours">Hours: </label><input type="number" name="hours" min="0" max="23" step="1" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" class="timebox" required="optional"></span>
-                        <span id="time-min"><label for="minutes">Minutes: </label><input type="number" name="minutes" min="0" max="59" step="1" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" class="timebox" required="optional"></span>
+                        <span  name="time-row"><label for="hours">Hours: </label><input id="time-hr" type="number" name="hours" min="0" max="23" step="1" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" class="timebox" required="optional"></span>
+                        <span ><label for="minutes">Minutes: </label><input id="time-min" type="number" name="minutes" min="0" max="59" step="1" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;" class="timebox" required="optional"></span>
                     </section>
                     <section>
                         <label for="frequency" class="labels">Freqency (min)</label><br>
